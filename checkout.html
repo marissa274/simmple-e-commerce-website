@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All My&Co | Checkout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts + Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./stylesheet/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">All</span> My&Co
+        </a>
+
+        <nav class="nav" id="mainNav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link">Shop</a>
+            <a href="index.html#about" class="nav-link">About</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="checkout.html" class="cart-link">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN CHECKOUT LAYOUT -->
+<main class="section">
+    <div class="container grid grid-2 checkout-layout">
+
+        <!-- LEFT SIDE: CART SUMMARY -->
+        <section class="checkout-card">
+            <h1>Your cart</h1>
+            <p class="muted">
+                Your cart is currently empty. When you connect this layout to Shopify or your backend, your real cart items will appear here.
+            </p>
+
+            <div class="cart-items">
+                <!-- EMPTY CART EXAMPLE (kept for illustration)
+                <div class="cart-item">
+                    <div>
+                        <p class="cart-item-name">Product Name</p>
+                        <p class="cart-item-meta">Category 1</p>
+                    </div>
+                    <div class="cart-item-right">
+                        <p>$39.00</p>
+                        <span>x1</span>
+                    </div>
+                </div>
+                -->
+            </div>
+
+            <div class="cart-totals">
+                <div class="cart-row">
+                    <span>Subtotal</span>
+                    <span>$0.00</span>
+                </div>
+                <div class="cart-row">
+                    <span>Shipping</span>
+                    <span>Calculated at checkout</span>
+                </div>
+                <div class="cart-row cart-row-total">
+                    <span>Total</span>
+                    <span>$0.00</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- RIGHT SIDE: SHIPPING + PAYMENT -->
+        <section class="checkout-card">
+            <h2>Checkout & Payment</h2>
+
+            <form class="checkout-form">
+
+                <!-- CONTACT INFORMATION -->
+                <h3>Contact information</h3>
+
+                <div class="form-group">
+                    <label for="fullName">Full name*</label>
+                    <input id="fullName" type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address*</label>
+                    <input id="email" type="email" required>
+                </div>
+
+                <!-- SHIPPING ADDRESS -->
+                <h3>Shipping address</h3>
+
+                <div class="form-group">
+                    <label for="address">Address*</label>
+                    <input id="address" type="text" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City*</label>
+                        <input id="city" type="text" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postal">Postal code*</label>
+                        <input id="postal" type="text" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country*</label>
+                    <input id="country" type="text" value="Canada" required>
+                </div>
+
+                <!-- PAYMENT METHODS -->
+                <h3>Payment method</h3>
+
+                <div class="payment-options">
+
+                    <label class="radio-card">
+                        <input type="radio" name="payment" checked>
+                        <div>
+                            <p>Credit / Debit card</p>
+                            <p class="muted">Visa, MasterCard, Amex</p>
+                        </div>
+                    </label>
+
+                    <label class="radio-card">
+                        <input type="radio" name="payment">
+                        <div>
+                            <p>PayPal</p>
+                            <p class="muted">Secure payment via PayPal.</p>
+                        </div>
+                    </label>
+
+                    <label class="radio-card">
+                        <input type="radio" name="payment">
+                        <div>
+                            <p>Shop Pay</p>
+                            <p class="muted">Available when connected to Shopify.</p>
+                        </div>
+                    </label>
+
+                </div>
+
+                <button type="submit" class="btn-primary btn-full">
+                    Place order
+                </button>
+
+                <p class="muted small-text">
+                    This checkout is a demo. Connect it to Shopify or your backend to accept real payments.
+                </p>
+            </form>
+        </section>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-inner">
+        <p>© <span id="year"></span> All My&Co. All rights reserved.</p>
+
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+            <a href="#">Return Policy</a>
+        </div>
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="main.js"></script>
+
+</body>
+</html>
